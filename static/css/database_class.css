@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 60px; /* 控制图片高度 */
+    vertical-align: middle; /* 垂直对齐 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-login {
+    display: flex;
+    align-items: center; /* 让搜索框和按钮垂直居中对齐 */
+    gap: 10px; /* 搜索框和按钮之间的间距 */
+    padding: 20px; /* 添加一些内边距 */
+    background-color: #fff; /* 背景颜色 */
+
+}
+
+.search-login input[type="text"] {
+    width: 200px; /* 设置搜索框宽度 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-login .login-link {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-login .login-link:hover {
+    background-color: #0056b3;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.course-recommend, .tutoring-service, .course-category, .course-list {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.course-item {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.course-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.contact, .social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.course-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.course-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.course-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.instructors p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.enrollment p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+/* 容器样式，用于居中对齐文本和视频部分 */
+.container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: flex-start; /* 垂直顶部对齐 */
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto; /* 水平方向自动 */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 文本部分样式 */
+.text-section {
+    padding: 20px;
+    flex: 1;
+    text-align: left; /* 保持文本左对齐 */
+}
+
+.text-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 视频部分样式 */
+.video-section {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: #e0e0e0;
+    position: relative; /* 为视频设置相对定位 */
+    width: 100%; /* 确保视频部分宽度为100% */
+}
+
+/* 视频样式 */
+.video-section video {
+    max-width: 100%; /* 视频宽度最大为容器宽度 */
+    height: auto; /* 高度自动 */
+    border-radius: 0 8px 8px 0; /* 圆角设置 */
+    display: block; /* 确保视频块级显示 */
+}
+
+
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.chapter-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.chapter-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chapter-list ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapter-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    cursor: pointer;
+}
+
+.chapter-list li:last-child {
+    border-bottom: none;
+}
+
+.chapter-list li::before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #007bff;
+}
+
+.chapter-list li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+.teachers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.teacher {
+    text-align: center;
+}
+
+.teacher img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teacher h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.teacher p {
+    font-size: 16px;
+}
+

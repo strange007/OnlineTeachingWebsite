@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 60px; /* 控制图片高度 */
+    vertical-align: middle; /* 垂直对齐 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-login {
+    display: flex;
+    align-items: center; /* 让搜索框和按钮垂直居中对齐 */
+    gap: 10px; /* 搜索框和按钮之间的间距 */
+    padding: 20px; /* 添加一些内边距 */
+    background-color: #fff; /* 背景颜色 */
+
+}
+
+.search-login input[type="text"] {
+    width: 200px; /* 设置搜索框宽度 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-login .login-link {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-login .login-link:hover {
+    background-color: #0056b3;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.course-recommend, .tutoring-service, .course-category, .course-list {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.course-item {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.course-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.contact, .social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* 辅导服务页面的样式 */
+.tutoring-service, .tutor-team, .appointment-form {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.tutoring-service h2, .tutor-team h2, .appointment-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-item, .tutor-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-item h3, .tutor-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-item p, .tutor-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tutor-item img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.appointment-form form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.appointment-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.appointment-form input, .appointment-form select, .appointment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.appointment-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.appointment-form button:hover {
+    background-color: #0056b3;
+}
+
+.learning-resources {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.learning-resources h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resource-section {
+    margin-bottom: 30px;
+}
+
+.resource-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.video-list, .watch-history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-item, .history-item {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.history-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+#appointment-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#appointment-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#appointment-form input, #appointment-form select, #appointment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#appointment-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#appointment-form button:hover {
+    background-color: #0056b3;
+}

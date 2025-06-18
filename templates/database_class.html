@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据库系统原理与开发</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/database_class.css') }}">
+<!--    <meta name="description" content="掌握数据库系统原理与应用开发技术，培养数据库应用系统开发能力，为IT职业发展奠定基础。">-->
+<!--    <meta name="keywords" content="数据库系统,电子科技大学,学堂在线,PostgreSQL,HBase,Redis,MongoDB,Neo4j">-->
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('courses') }}">课程</a></li>
+                    <li><a href="{{ url_for('tutoring') }}">辅导服务</a></li>
+                    <li><a href="{{ url_for('resources') }}">学习资源</a></li>
+                    <li><a href="{{ url_for('aichat') }}">AI对话</a></li>
+
+                </ul>
+            </nav>
+            <div>
+                <div class="search-login">
+                    <a href="{{ url_for('login') }}" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!-- 课程信息区块 -->
+    <img src="{{ url_for('static', filename='img/bj.jpg') }}" alt="Background" class="background-image">
+    <section class="course-info">
+        <h1>数据库系统原理与开发</h1>
+        <h2>电子科技大学 | 学堂在线</h2>
+        <div class="instructors">
+            <p>主讲教师：<span>Xin Lu</span> | <span>张凤荔</span> | <span>陈安龙</span></p>
+        </div>
+        <div class="enrollment">
+            <p>开课时间：2025年7月22日</p>
+            <p>已报名人数：18,910人</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="text-section">
+            <h1>课程介绍</h1>
+            <p>数据库系统是信息技术重要的支撑基础，掌握数据库系统原理与应用开发技术是打开通向各类信息系统、互联网信息服务、大数据技术应用之门的钥匙。本课程是由电子科技大学教师开设的数据库系统原理基础课程。通过本课程学习，学习者可获得数据库系统原理知识、熟练掌握数据库技术方法，培养数据库应用系统开发能力，为从事IT职业开创自己广阔的一片天地。</p>
+        </div>
+        <div class="video-section">
+            <video controls>
+                <source src="{{ url_for('static', filename='img/1.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="chapter-list">
+            <h1>课程章节</h1>
+            <ol>
+                <li>第1章 数据库系统概论</li>
+                <li>第2章 数据库关系模型</li>
+                <li>第3章 数据库操作SQL语言</li>
+                <li>第4章 数据库设计与实现</li>
+                <li>第5章 数据库管理</li>
+                <li>第6章 数据库应用编程</li>
+                <li>第7章 NoSQL数据库技术</li>
+            </ol>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">教师团队</h2>
+    <div class="teachers">
+        <div class="teacher">
+            <img src="image1.jpg" alt="陆鑫">
+            <h3>陆鑫</h3>
+            <p>电子科技大学 信息与软件工程学院 副教授</p>
+        </div>
+        <div class="teacher">
+            <img src="image2.jpg" alt="张凤荔">
+            <h3>张凤荔</h3>
+            <p>电子科技大学 软件学院 教授</p>
+        </div>
+        <div class="teacher">
+            <img src="image3.jpg" alt="陈安龙">
+            <h3>陈安龙</h3>
+            <p>电子科技大学 软件学院 副教授</p>
+        </div>
+    </div>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2025 教学辅导网站</p>
+        <div class="contact">
+            <p>电话：13265902003</p>
+            <p>邮箱：v13690153350@163.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">微信公众号</a>
+            <a href="#">微博</a>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+

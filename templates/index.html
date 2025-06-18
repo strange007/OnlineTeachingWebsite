@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学辅导网站 - 首页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('courses') }}">课程</a></li>
+                    <li><a href="{{ url_for('tutoring') }}">辅导服务</a></li>
+                    <li><a href="{{ url_for('resources') }}">学习资源</a></li>
+                    <li><a href="{{ url_for('aichat') }}">AI对话</a></li>
+
+                </ul>
+            </nav>
+            <div>
+                <div class="search-login">
+                    <a href="{{ url_for('login') }}" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='img/lunbo1.png') }}" alt="轮播图1">
+            <div class="carousel-caption">广东工业大学</div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/lunbo2.png') }}" alt="轮播图2">
+            <div class="carousel-caption">广东工业大学</div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/lunbo3.png') }}" alt="轮播图3">
+            <div class="carousel-caption">广东工业大学</div>
+        </div>
+    </div>
+
+    <!-- 课程推荐区 -->
+    <section class="course-recommend">
+        <h2>热门课程</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <img src="{{ url_for('static', filename='img/shendu.png') }}" alt="课程封面">
+                <h3>深度学习</h3>
+                <p>教师：张老师</p>
+                <p>价格：￥199</p>
+                <p>评分：4.8</p>
+            </div>
+            <div class="course-item">
+                <img src="{{ url_for('static', filename='img/wajue.png') }}" alt="课程封面">
+                <h3>数据挖掘</h3>
+                <p>教师：李老师</p>
+                <p>价格：￥299</p>
+                <p>评分：4.9</p>
+            </div>
+            <!-- 更多课程 -->
+        </div>
+    </section>
+
+    <!-- 辅导服务介绍 -->
+    <section class="tutoring-service">
+        <h2>辅导服务</h2>
+        <div class="service-item">
+            <h3>一对一辅导</h3>
+            <p>个性化教学，专属导师</p>
+            <button>预约</button>
+        </div>
+        <div class="service-item">
+            <h3>小组辅导</h3>
+            <p>互动性强，价格优惠</p>
+            <button>预约</button>
+        </div>
+    </section>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2025 教学辅导网站</p>
+        <div class="contact">
+            <p>电话：13265902003</p>
+            <p>邮箱：v13690153350@163.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">微信公众号</a>
+            <a href="#">微博</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/lunbo.js') }}"></script>
+</body>
+</html>
+
+
+

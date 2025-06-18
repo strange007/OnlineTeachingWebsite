@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学辅导网站 - 辅导服务</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tutoring.css') }}">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('courses') }}">课程</a></li>
+                    <li><a href="{{ url_for('tutoring') }}">辅导服务</a></li>
+                    <li><a href="{{ url_for('resources') }}">学习资源</a></li>
+                    <li><a href="{{ url_for('aichat') }}">AI对话</a></li>
+
+                </ul>
+            </nav>
+            <div>
+                <div class="search-login">
+                    <a href="{{ url_for('login') }}" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 辅导服务介绍 -->
+    <section class="tutoring-service">
+        <h2>辅导服务</h2>
+        <div class="service-intro">
+            <div class="service-item">
+                <h3>一对一辅导</h3>
+                <p>个性化教学，根据学生的学习进度和需求制定专属教学计划。</p>
+                <p><strong>服务流程：</strong>咨询 - 制定计划 - 安排导师 - 开始辅导</p>
+                <p><strong>价格：</strong>￥300/小时</p>
+                <p><strong>预约方式：</strong>填写预约表单或联系客服</p>
+            </div>
+            <div class="service-item">
+                <h3>小组辅导</h3>
+                <p>互动性强，适合希望在小组环境中学习的学生。</p>
+                <p><strong>课程安排：</strong>每周两次，每次2小时</p>
+                <p><strong>班级规模：</strong>4-6人</p>
+                <p><strong>价格：</strong>￥200/小时</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 导师团队展示 -->
+    <section class="tutor-team">
+        <h2>导师团队</h2>
+        <div class="tutor-list">
+            <div class="tutor-item">
+                <img src="./img/tutor1.jpg" alt="导师1" height="150">
+                <h3>张老师</h3>
+                <p>北京大学    软件学院</p>
+            </div>
+            <div class="tutor-item">
+                <img src="./img/tutor2.jpg" alt="导师2" height="150">
+                <h3>李老师</h3>
+                <p>清华大学    软件学院</p>
+            </div>
+            <div class="tutor-item">
+                <img src="./img/tutor3.jpg" alt="导师3" height="150">
+                <h3>王老师</h3>
+                <p>哈尔滨工业大学    软件学院</p>
+            </div>
+        </div>
+    </section>
+
+<!-- 预约咨询表单 -->
+<section class="appointment-form">
+    <h2>预约咨询</h2>
+    <form action="tutoring" method="post">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">电话：</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="choice">选择服务：</label>
+        <select id="choice" name="choice" required>
+            <option value="课程免费学习">课程免费学习</option>
+            <option value="课程认证学习">课程认证学习</option>
+        </select><br><br>
+
+        <label for="message">备注：</label>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <button type="submit">提交预约</button>
+    </form>
+</section>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2025 教学辅导网站</p>
+        <div class="contact">
+            <p>电话：13265902003</p>
+            <p>邮箱：v13690153350@163.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">微信公众号</a>
+            <a href="#">微博</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学辅导网站 - 首页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('courses') }}">课程</a></li>
+                    <li><a href="{{ url_for('tutoring') }}">辅导服务</a></li>
+                    <li><a href="{{ url_for('resources') }}">学习资源</a></li>
+                    <li><a href="{{ url_for('aichat') }}">AI对话</a></li>
+
+                </ul>
+            </nav>
+            <div>
+                <div class="search-login">
+                    <a href="{{ url_for('login') }}" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <form action="login" method="post">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="登录">
+    </form>
+    <form action="/register" method="POST">
+        <p>还没有账号？</p>
+        <!-- <button type="submit">立即注册</button> -->
+        <a href="{{ url_for('register') }}">立即注册</a>
+    </form>
+
+
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2025 教学辅导网站</p>
+        <div class="contact">
+            <p>电话：13265902003</p>
+            <p>邮箱：v13690153350@163.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">微信公众号</a>
+            <a href="#">微博</a>
+        </div>
+    </footer>
+
+    <script src="lunbo.js"></script>
+</body>
+</html>
+
+
+

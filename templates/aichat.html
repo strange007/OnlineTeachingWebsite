@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教学辅导网站 - 首页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aichat.css') }}">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">首页</a></li>
+                    <li><a href="{{ url_for('courses') }}">课程</a></li>
+                    <li><a href="{{ url_for('tutoring') }}">辅导服务</a></li>
+                    <li><a href="{{ url_for('resources') }}">学习资源</a></li>
+                    <li><a href="{{ url_for('aichat') }}">AI对话</a></li>
+
+                </ul>
+            </nav>
+            <div>
+                <div class="search-login">
+                    <a href="{{ url_for('login') }}" class="login-link">登录/注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="chat-container">
+        <div class="chat-header">AI课程辅导</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="请输入消息...">
+            <button onclick="sendMessage()">发送</button>
+        </div>
+    </div>
+
+
+    <script>
+        const chatBody = document.getElementById('chat-body');
+        const userInput = document.getElementById('user-input');
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message === '') return;
+            // 显示用户消息
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.innerHTML = `<div class="text">${message}</div>`;
+            chatBody.appendChild(userMessage);
+
+            // 滚动到最底部
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // 发送消息到后端
+            fetch('/aichat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 显示AI回复
+                const aiMessage = document.createElement('div');
+                aiMessage.classList.add('message');
+                aiMessage.innerHTML = `<div class="text">${data.response}</div>`;
+                chatBody.appendChild(aiMessage);
+
+                // 滚动到最底部
+                chatBody.scrollTop = chatBody.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            // 清空输入框
+            userInput.value = '';
+        }
+        // 页面加载完成后发送默认消息
+        window.onload = function() {
+            const welcome = "welcome";
+            fetch('/aichat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: welcome })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 显示默认消息
+                const welcomeMessage = document.createElement('div');
+                welcomeMessage.classList.add('message');
+                welcomeMessage.innerHTML = `<div class="text">${data.response}</div>`;
+                chatBody.appendChild(welcomeMessage);
+
+                // 滚动到最底部
+                chatBody.scrollTop = chatBody.scrollHeight;
+            })
+
+            .catch(error => {
+            console.error('Error:', error);
+            });
+
+            // 清空输入框
+            userInput.value = '';
+        }
+    </script>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>&copy; 2025 教学辅导网站</p>
+        <div class="contact">
+            <p>电话：13265902003</p>
+            <p>邮箱：v13690153350@163.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">微信公众号</a>
+            <a href="#">微博</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/lunbo.js') }}"></script>
+</body>
+</html>
+
+
+

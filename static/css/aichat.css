@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 60px; /* 控制图片高度 */
+    vertical-align: middle; /* 垂直对齐 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-login {
+    display: flex;
+    align-items: center; /* 让搜索框和按钮垂直居中对齐 */
+    gap: 10px; /* 搜索框和按钮之间的间距 */
+    padding: 20px; /* 添加一些内边距 */
+    background-color: #fff; /* 背景颜色 */
+
+}
+
+.search-login input[type="text"] {
+    width: 200px; /* 设置搜索框宽度 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-login .login-link {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-login .login-link:hover {
+    background-color: #0056b3;
+}
+
+
+.chat-container {
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-size: 24px; /* 增加字体大小 */
+    position: relative; /* 新增：使chat-footer相对于此容器定位 */
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 48px; /* 增加字体大小 */
+}
+
+.chat-body {
+    padding: 10px;
+    height: calc(100% - 200px); /* 减去header和footer的高度 */
+    overflow-y: auto;
+    font-size: 36px; /* 增加字体大小 */
+}
+
+.chat-footer {
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 放在底部 */
+    width: 100%; /* 宽度100% */
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 32px; /* 增加字体大小 */
+}
+
+.chat-footer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 32px; /* 增加字体大小 */
+}
+
+.chat-footer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 32px; /* 增加字体大小 */
+}
+
+.chat-footer button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-bottom: 10px;
+    font-size: 36px; /* 增加字体大小 */
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message .text {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    font-size: 36px; /* 增加字体大小 */
+}
+
+.message.user .text {
+    background-color: #007bff;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.contact, .social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+}
